@@ -122,7 +122,7 @@ function init()
 	var shadeMaterial = new THREE.MeshLambertMaterial( { color: 0xff0000 } );
 	
 	// we will draw a wireframe texture from one single square image and apply colors to it
-	var wireTexture = new THREE.ImageUtils.loadTexture( 'square.png' );
+	var wireTexture = new THREE.ImageUtils.loadTexture( 'https://stemkoski.github.io/Three.js/images/square.png' );
 	wireTexture.wrapS = wireTexture.wrapT = THREE.RepeatWrapping; 
 	wireTexture.repeat.set( 40, 40 );
 	wireMaterial = new THREE.MeshBasicMaterial( { map: wireTexture, vertexColors: THREE.VertexColors, side:THREE.DoubleSide } );
@@ -166,7 +166,7 @@ function init()
 
 	// the preset function in this code is used to render the default graph
 	var graph_preset = graph.addFolder('Preset equations');
-	graph_preset.add( parameters, 'preset1' ).name('Hyperbolic Paraboloid');
+	graph_preset.add( parameters, 'preset1' ).name('Hyperb Paraboloid');
 
 	graph.add( parameters, 'resetCam' ).name("Reset Camera");
 	graph.add( parameters, 'graphFunc' ).name("Graph Function");	
